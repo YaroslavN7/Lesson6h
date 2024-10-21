@@ -6,10 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Listeners;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import pages.Dogfeet;
 import pages.MainPage;
 import pages.ShopCategory;
@@ -25,7 +22,7 @@ public class fourHome5 {
     ShopCategory shopCategory;
     Dogfeet dogfeet;
 
-    @BeforeTest
+    @BeforeMethod
     public void beforeTest(){
 
         System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
@@ -77,7 +74,7 @@ public class fourHome5 {
 
 
 
-    @AfterTest
+    @AfterMethod
     public void closeTest(){
         driver.quit();
 
