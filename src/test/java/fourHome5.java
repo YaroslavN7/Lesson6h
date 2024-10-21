@@ -1,3 +1,4 @@
+import io.qameta.allure.testng.AllureTestNg;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -7,6 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import pages.Dogfeet;
 import pages.MainPage;
@@ -14,6 +16,7 @@ import pages.ShopCategory;
 
 import java.time.Duration;
 
+@Listeners({AllureTestNg.class})
 public class fourHome5 {
 
     WebDriver driver;
